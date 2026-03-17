@@ -10,6 +10,7 @@ String modelo
 String marca
 BigDecimal preco
 // commit, de teste
+// pra testar 
     static belongsTo = [loja: LojaCarros]
 
 
