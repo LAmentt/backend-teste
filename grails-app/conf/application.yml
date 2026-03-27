@@ -103,8 +103,8 @@ dataSource:
 environments:
     development:
         dataSource:
-            dbCreate: create-drop
-            url: jdbc:postgresql://localhost:5432/db_aprendiz_banco
+            dbCreate: update
+            url: jdbc:postgresql://localhost:5432/db_aprendiz_estudo
     test:
         dataSource:
             dbCreate: update

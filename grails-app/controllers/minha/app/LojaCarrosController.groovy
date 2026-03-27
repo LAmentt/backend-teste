@@ -12,4 +12,8 @@ class LojaCarrosController {
             render loja.errors as JSON
         }
     }
+    def index(){
+        render LojaCarros.list() as JSON
+    }
+
 }

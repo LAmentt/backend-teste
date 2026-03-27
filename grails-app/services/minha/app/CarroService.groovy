@@ -1,6 +1,7 @@
 package minha.app
 
 import grails.gorm.transactions.Transactional
+import grails.validation.ValidationException
 
 @Transactional
 class CarroService {
@@ -13,8 +14,22 @@ class CarroService {
         return Carro.list(args)
     }
 
-    Long count() {
-        return Carro.count()
+    Carro salvarCarro(Map dados) {
+    Carro carro = new Carro(dados)
+    carro.id = null 
+    
+    
+    return carro.save(flush: true, failOnError: true) 
+    }
+
+    Carro atualizarCarro(Long id, Map dados) {
+    Carro carro = Carro.get(id)
+    if (!carro) return null
+
+    carro.properties = dados
+    
+    
+    return carro.save(flush: true, failOnError: true)
     }
 
     void delete(Serializable id) {
@@ -23,28 +38,4 @@ class CarroService {
             carro.delete(flush: true)
         }
     }
-
-    Carro save(Carro carro) {
-        return carro.save(flush: true, failOnError: true)
-    }
-
-
-    Carro update(Serializable id, Map params) {
-        Carro carro = Carro.get(id)
-        
-        if (!carro) {
-            return null
-        }
-        
-        if (params.cor) carro.cor = params.cor
-        if (params.qtPorta) carro.qtPorta = params.qtPorta as Integer
-        if (params.tpMotor) carro.tpMotor = params.tpMotor
-        if (params.modelo) carro.modelo = params.modelo
-        if (params.marca) carro.marca = params.marca
-        
-        return carro.save(flush: true, failOnError: true)
-        
-        }
-
-
 }

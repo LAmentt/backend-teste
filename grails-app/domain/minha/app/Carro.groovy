@@ -9,9 +9,7 @@ String tpMotor
 String modelo
 String marca
 BigDecimal preco
-// commit, de teste
-// pra testar 
-// outro teste ai
+
     static belongsTo = [loja: LojaCarros]
 
 
