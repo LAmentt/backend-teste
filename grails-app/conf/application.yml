@@ -95,9 +95,9 @@ dataSource:
     pooled: true
     jmxExport: true
     driverClassName: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/db_aprendiz_estudo
+    url: jdbc:postgresql://localhost:5432/db_aprendiz_banco
     username: 'lorenzo'
-    password: 'lorenzo'   
+    password: 'IPPA2424'   
     dialect: org.hibernate.dialect.PostgreSQLDialect
 
 environments:
@@ -108,11 +108,11 @@ environments:
     test:
         dataSource:
             dbCreate: update
-            url: jdbc:postgresql://localhost:5432/db_aprendiz_estudo_test
+            url: jdbc:postgresql://localhost:5432/db_aprendiz_banco_test
     production:
         dataSource:
             dbCreate: none
-            url: jdbc:postgresql://localhost:5432/db_aprendiz_estudo
+            url: jdbc:postgresql://localhost:5432/db_aprendiz_banco
             properties:
                 jmxEnabled: true
                 initialSize: 5
