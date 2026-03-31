@@ -16,7 +16,7 @@ String placa
 
     static List<String> MARCAS_VALIDAS = ['Ford', 'Toyota', 'Volkswagen', 'Honda', 'Fiat', 'Chevrolet', 
     'Porsche', 'Ferrari', 'Hyundai', 'Lamboghini', 'Tesla', 'Peugeot', 'Renault', 'Citroen', 
-    'Mitsubishi', 'Subaru', 'Suzuki', 'Mazda', 'Lexus', 'Nissan']
+    'Mitsubishi', 'Subaru', 'Suzuki', 'Mazda', 'Lexus', 'BYD', 'Nissan']
     
     
     static constraints = {
@@ -36,7 +36,7 @@ String placa
         }
 
              
-        qtPorta min: 2, max: 5
+        qtPorta min: 2, max: 6
         tpMotor inList: ['Gasolina','Diesel','Eletrico','Hibrido']
         modelo nullable: false
         preco nullable: false, min: 5000.0 , max: 1000000000.0, scale: 2
