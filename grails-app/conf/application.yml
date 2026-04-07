@@ -97,7 +97,7 @@ dataSource:
     driverClassName: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/db_aprendiz_banco
     username: 'lorenzo'
-    password: 'IPPA2424'   
+    password: 'lorenzo'   
     dialect: org.hibernate.dialect.PostgreSQLDialect
 
 environments:
