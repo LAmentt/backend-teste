@@ -16,7 +16,8 @@ String placa
 
     static List<String> MARCAS_VALIDAS = ['Ford', 'Toyota', 'Volkswagen', 'Honda', 'Fiat', 'Chevrolet', 
     'Porsche', 'Ferrari', 'Hyundai', 'Lamboghini', 'Tesla', 'Peugeot', 'Renault', 'Citroen', 
-    'Mitsubishi', 'Subaru', 'Suzuki', 'Mazda', 'Lexus', 'BYD', 'Nissan']
+    'Mitsubishi', 'Subaru', 'Suzuki', 'Mazda', 'Lexus', 'BYD', 'Nissan', 'Rolls-Royce','McLaren','Aston Martin',
+    'Betley','Maserati','Bugatti','Mercedes-Benz','Audi','Land Rover','Volvo','Jeep','Jaguar',]
     
     
     static constraints = {
